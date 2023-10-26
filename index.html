@@ -1,0 +1,721 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту странницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Table test</title>
+	<meta charset="UTF-8">
+	<style>
+		.table_wrapper {
+			border-collapse: collapse;
+			width: 100%;
+		}
+		.table_title{
+			border: 2px blue  solid; color: #ffffff;
+			background-color: #888888;
+		}
+		.table_padding {
+			padding: 5px;
+		}
+		.table_cell_border {
+			border: 2px blue  solid;
+		}
+		.table_text_center{
+			text-align: center;
+		}
+		.table_cell_vertical_center{
+			vertical-align: middle;
+		}
+		.table_cell_total{
+			text-align: right;
+		}
+		
+		.square_table_position {
+			border-collapse: collapse;
+			margin: 50px auto;
+		}
+		.square_cell {
+			width: 25px;
+			height: 25px;
+		}
+		.square_cell_color_red {
+			background-color: red;
+		}
+		.square_cell_color_green {
+			background-color: green;
+		}
+
+		.container_rhomb{
+		text-align: center;
+		}
+		.rhomb {
+			border-collapse: collapse;
+			display: inline-block;
+			margin: 0px 25px 0 0;
+		}
+		.rhomb_cell{
+			height: 25px;
+			width: 25px;
+		}
+		.rhomb_pink_cell_color_layer_first{
+			background-color: #ff0099;
+		}
+		.rhomb_pink_cell_color_layer_2nd{
+			background-color: #ff99ff;
+		}
+		.rhomb_pink_cell_color_layer_3rd{
+			background-color: #ff66cc;
+		}
+		.rhomb_pink_cell_color_layer_center{
+			background-color: #ffcccc;
+		}
+		.rhomb_green_cell_color_layer_first{
+			background-color: #228022;
+		}
+		.rhomb_green_cell_color_layer_2nd{
+			background-color: #3cb371;
+		}
+		.rhomb_green_cell_color_layer_3rd{
+			background-color: #32cd32;
+		}
+		.rhomb_green_cell_color_layer_center{
+			background-color: #00ff00;
+		}
+
+		.tree_container {
+			width: 275px;
+			height: 460px;
+			background-color: black;
+			margin: 20px auto;
+	}
+	.tree_table{
+				border-collapse: collapse;
+				border-spacing: 0;
+			}
+			.tree_cell{
+				width: 25px;
+				height: 25px;
+			}
+			.tree_color_first {
+				background-color: #008000;
+			}
+			.tree_color_2nd{
+				background-color: #2e8b57;
+			}
+			.tree_color_3rd{
+				background-color: #3cb371;
+			}
+			.tree_color_4th{
+				background-color: #32cd32;
+			}
+			.tree_trunk_color_bark {
+				background-color: #8b4513;
+			}
+			.tree_trunk_color_center {
+				background-color: #b8860b;
+			}
+	</style>
+</head>
+<!-- Отображает тело страницы -->
+<body>
+	<h1>Пример сложной таблицы</h1>
+	<table class="table_wrapper">
+		<!--Строка заголовок-->
+		<tr class="table_title">
+			<th class="table_padding">Название 1</th>
+			<th class="table_padding">Название 2</th>
+			<th class="table_padding">Ещё название</th>
+			<th class="table_padding">Куча элементов</th>
+			<th class="table_padding">Список1</th>
+			<th class="table_padding">Список2</th>
+		</tr>
+<!--1-ая строка-->
+		<tr>
+			<td class="table_padding table_cell_border table_text_center table_cell_vertical_center" rowspan="11">JPMC</td>
+			<td class="table_padding table_cell_border table_cell_vertical_center" rowspan="5">CST</td>
+			<td class="table_padding table_cell_border table_cell_vertical_center" rowspan="3">CT</td>
+			<td class="table_padding table_cell_border">ADS</td>
+			<td class="table_padding table_cell_border table_text_center">1</td>
+			<td class="table_padding table_cell_border table_text_center">10</td>
+		</tr>
+<!--2-ая строка-->
+		<tr>
+			<td class="table_padding table_cell_border">BTO</td>
+			<td class="table_padding table_cell_border table_text_center">2</td>
+			<td class="table_padding table_cell_border table_text_center">15</td>
+		</tr>
+<!--3-ая строка-->
+		<tr>
+			<td class="table_padding table_cell_border">CSI</td>
+			<td class="table_padding table_cell_border table_text_center">3</td>
+			<td class="table_padding table_cell_border table_text_center">16</td>
+		</tr>
+<!--4-ая строка-->
+		<tr>
+			<td class="table_padding table_cell_border table_text_center" rowspan="2">VCT</td>
+			<td class="table_padding table_cell_border">ADS</td>
+			<td class="table_padding table_cell_border table_text_center">4</td>
+			<td class="table_padding table_cell_border table_text_center">10</td>
+		</tr>
+<!--5-ая строка-->
+		<tr>
+			<td class="table_padding table_cell_border">BTO</td>
+			<td class="table_padding table_cell_border table_text_center">5</td>
+			<td class="table_padding table_cell_border table_text_center">15</td>
+		</tr>
+<!--6-ая строка-->
+		<tr>
+			<td class="table_padding table_cell_border table_cell_total" colspan="3">Sub Total</td>
+			<td class="table_padding table_cell_border table_text_center">6</td>
+			<td class="table_padding table_cell_border table_text_center">15</td>
+		</tr>
+<!--7-ая строка-->
+		<tr>
+			<td class="table_padding table_cell_border" rowspan="4">CST</td>
+			<td class="table_padding table_cell_border" rowspan="3">CT</td>
+			<td class="table_padding table_cell_border">ADS</td>
+			<td class="table_padding table_cell_border table_text_center">7</td>
+			<td class="table_padding table_cell_border table_text_center">10</td>
+		</tr>
+<!--8-ая строка-->
+		<tr>
+			<td class="table_padding table_cell_border">BTO</td>
+			<td class="table_padding table_cell_border table_text_center">8</td>
+			<td class="table_padding table_cell_border table_text_center">15</td>
+		</tr>
+<!--9-ая строка-->
+		<tr>
+			<td class="table_padding table_cell_border">CSI</td>
+			<td class="table_padding table_cell_border table_text_center">9</td>
+			<td class="table_padding table_cell_border table_text_center">16</td>
+		</tr>
+<!--10-ая строка-->
+		<tr>
+			<td class="table_padding table_cell_border table_text_center">VCT</td>
+			<td class="table_padding table_cell_border">ADS</td>
+			<td class="table_padding table_cell_border table_text_center">10</td>
+			<td class="table_padding table_cell_border table_text_center">10</td>
+		</tr>
+<!--11-ая строка-->
+		<tr>
+			<td class="table_padding table_cell_border table_cell_total" colspan="3">Sub Total</td>
+			<td class="table_padding table_cell_border table_text_center">11</td>
+			<td class="table_padding table_cell_border table_text_center">15</td>
+		</tr>
+	</table>
+
+	<table class="square_table_position">
+		<tr>
+			<td class="square_cell square_cell_color_red"></td>
+			<td class="square_cell"></td>
+			<td class="square_cell square_cell_color_red"></td>
+			<td class="square_cell square_cell_color_green"></td>
+			<td class="square_cell square_cell_color_red"></td>
+			<td class="square_cell"></td>
+			<td class="square_cell square_cell_color_red"></td>
+		</tr>
+		<tr>
+			<td class="square_cell"></td>
+			<td class="square_cell square_cell_color_red"></td>
+			<td class="square_cell square_cell_color_green"></td>
+			<td class="square_cell"></td>
+			<td class="square_cell square_cell_color_green"></td>
+			<td class="square_cell square_cell_color_red"></td>
+			<td class="square_cell"></td>
+		</tr>
+		<tr>
+			<td class="square_cell square_cell_color_red"></td>
+			<td class="square_cell square_cell_color_green"></td>
+			<td class="square_cell"></td>
+			<td class="square_cell"></td>
+			<td class="square_cell"></td>
+			<td class="square_cell square_cell_color_green"></td>
+			<td class="square_cell square_cell_color_red"></td>
+		</tr>
+		<tr>
+			<td class="square_cell square_cell_color_green"></td>
+			<td class="square_cell"></td>
+			<td class="square_cell"></td>
+			<td class="square_cell square_cell_color_red"></td>
+			<td class="square_cell"></td>
+			<td class="square_cell"></td>
+			<td class="square_cell square_cell_color_green"></td>
+		</tr>
+		<tr>
+			<td class="square_cell square_cell_color_red"></td>
+			<td class="square_cell square_cell_color_green"></td>
+			<td class="square_cell"></td>
+			<td class="square_cell"></td>
+			<td class="square_cell"></td>
+			<td class="square_cell square_cell_color_green"></td>
+			<td class="square_cell square_cell_color_red"></td>
+		</tr>
+		<tr>
+			<td class="square_cell"></td>
+			<td class="square_cell square_cell_color_red"></td>
+			<td class="square_cell square_cell_color_green"></td>
+			<td class="square_cell"></td>
+			<td class="square_cell square_cell_color_green"></td>
+			<td class="square_cell square_cell_color_red"></td>
+			<td class="square_cell"></td>
+		</tr>
+		<tr>
+			<td class="square_cell square_cell_color_red"></td>
+			<td class="square_cell"></td>
+			<td class="square_cell square_cell_color_red"></td>
+			<td class="square_cell square_cell_color_green"></td>
+			<td class="square_cell square_cell_color_red"></td>
+			<td class="square_cell"></td>
+			<td class="square_cell square_cell_color_red"></td>
+		</tr>
+	</table>
+
+	<div class="container_rhomb">
+
+			<table class="rhomb">
+				<tr>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell"></td>
+				</tr>
+				<tr>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_2nd"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell"></td>
+				</tr>
+				<tr>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_2nd"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_3rd"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_2nd"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+					<td class="rhomb_cell"></td>
+				</tr>
+				<tr>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_2nd"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_3rd"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_center"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_3rd"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_2nd"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+				</tr>
+				<tr>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_2nd"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_3rd"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_2nd"></td>
+					<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+					<td class="rhomb_cell"></td>
+				</tr>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_2nd"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell"></td>
+			</tr>
+			<tr>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell"></td>
+			</tr>
+			<tr>
+			</table>
+
+			<table class="rhomb">
+				<tr>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_first"></td>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell"></td>
+				</tr>
+				<tr>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_first"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_2nd"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_first"></td>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell"></td>
+				</tr>
+				<tr>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_first"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_2nd"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_3rd"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_2nd"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_first"></td>
+					<td class="rhomb_cell"></td>
+				</tr>
+				<tr>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_first"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_2nd"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_3rd"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_center"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_3rd"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_2nd"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_first"></td>
+				</tr>
+				<tr>
+					<td class="rhomb_cell"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_first"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_2nd"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_3rd"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_2nd"></td>
+					<td class="rhomb_cell rhomb_green_cell_color_layer_first"></td>
+					<td class="rhomb_cell"></td>
+				</tr>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell rhomb_green_cell_color_layer_first"></td>
+				<td class="rhomb_cell rhomb_green_cell_color_layer_2nd"></td>
+				<td class="rhomb_cell rhomb_green_cell_color_layer_first"></td>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell"></td>
+			</tr>
+			<tr>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell rhomb_green_cell_color_layer_first"></td>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell"></td>
+			</tr>
+			</table>
+
+		<table class="rhomb">
+			<tr>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell"></td>
+			</tr>
+			<tr>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_2nd"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell"></td>
+			</tr>
+			<tr>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_2nd"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_3rd"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_2nd"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+				<td class="rhomb_cell"></td>
+			</tr>
+			<tr>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_2nd"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_3rd"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_center"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_3rd"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_2nd"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+			</tr>
+			<tr>
+				<td class="rhomb_cell"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_2nd"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_3rd"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_2nd"></td>
+				<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+				<td class="rhomb_cell"></td>
+			</tr>
+			<td class="rhomb_cell"></td>
+			<td class="rhomb_cell"></td>
+			<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+			<td class="rhomb_cell rhomb_pink_cell_color_layer_2nd"></td>
+			<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+			<td class="rhomb_cell"></td>
+			<td class="rhomb_cell"></td>
+		</tr>
+		<tr>
+			<td class="rhomb_cell"></td>
+			<td class="rhomb_cell"></td>
+			<td class="rhomb_cell"></td>
+			<td class="rhomb_cell rhomb_pink_cell_color_layer_first"></td>
+			<td class="rhomb_cell"></td>
+			<td class="rhomb_cell"></td>
+			<td class="rhomb_cell"></td>
+		</tr>
+		</table>
+	</div>
+
+	<div class="tree_container"> 
+
+		<table class="tree_table">
+
+			<tr>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell tree_color_first"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+			</tr>
+
+			<tr>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell tree_color_2nd"></td>
+				<td class="tree_cell tree_color_2nd"></td>
+				<td class="tree_cell tree_color_2nd"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+			</tr>
+
+			<tr>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+			</tr>
+
+			<tr>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+			</tr>
+
+			<tr>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell tree_color_first"></td>
+				<td class="tree_cell tree_color_first"></td>
+				<td class="tree_cell tree_color_first"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+			</tr>
+
+			<tr>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell tree_color_2nd"></td>
+				<td class="tree_cell tree_color_2nd"></td>
+				<td class="tree_cell tree_color_2nd"></td>
+				<td class="tree_cell tree_color_2nd"></td>
+				<td class="tree_cell tree_color_2nd"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+			</tr>
+
+			<tr>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+			</tr>
+
+			<tr>
+				<td class="tree_cell"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell"></td>
+			</tr>
+
+			<tr>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell tree_color_first"></td>
+				<td class="tree_cell tree_color_first"></td>
+				<td class="tree_cell tree_color_first"></td>
+				<td class="tree_cell tree_color_first"></td>
+				<td class="tree_cell tree_color_first"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+			</tr>
+
+			<tr>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell tree_color_2nd"></td>
+				<td class="tree_cell tree_color_2nd"></td>
+				<td class="tree_cell tree_color_2nd"></td>
+				<td class="tree_cell tree_color_2nd"></td>
+				<td class="tree_cell tree_color_2nd"></td>
+				<td class="tree_cell tree_color_2nd"></td>
+				<td class="tree_cell tree_color_2nd"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+			</tr>
+
+			<tr>
+				<td class="tree_cell"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell tree_color_3rd"></td>
+				<td class="tree_cell"></td>
+			</tr>
+
+			<tr>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+				<td class="tree_cell tree_color_4th"></td>
+			</tr>
+
+			<tr>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell tree_trunk_color_bark"></td>
+				<td class="tree_cell tree_trunk_color_center"></td>
+				<td class="tree_cell tree_trunk_color_bark"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+			</tr>
+
+			<tr>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell tree_trunk_color_bark"></td>
+				<td class="tree_cell tree_trunk_color_center"></td>
+				<td class="tree_cell tree_trunk_color_bark"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+			</tr>
+
+			<tr>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell tree_trunk_color_bark"></td>
+				<td class="tree_cell tree_trunk_color_center"></td>
+				<td class="tree_cell tree_trunk_color_bark"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+			</tr>
+
+			<tr>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell tree_trunk_color_bark"></td>
+				<td class="tree_cell tree_trunk_color_center"></td>
+				<td class="tree_cell tree_trunk_color_bark"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+			</tr>
+
+			<tr>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell tree_trunk_color_bark"></td>
+				<td class="tree_cell tree_trunk_color_center"></td>
+				<td class="tree_cell tree_trunk_color_bark"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+				<td class="tree_cell"></td>
+			</tr>
+		</table>
+	</div>
+
+</body>
+
+</html>
